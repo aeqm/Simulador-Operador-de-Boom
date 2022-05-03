@@ -1,2 +1,2 @@
 # Simulador-Pruebas
-Simulador para entrenamiento de operadores de boom creado por Alejandro Quintero en solitario
+Simulador para entrenamiento de operadores de boom creado por Alejandro Quintero 
