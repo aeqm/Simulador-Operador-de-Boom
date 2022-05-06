@@ -12,6 +12,9 @@ public class HideMenu : MonoBehaviour
         hideMenu.action.started += Hide;
 
     }
+    void Start()
+    { gameObject.SetActive(false);
+    }
 
     private void OnDestroy()
     {
