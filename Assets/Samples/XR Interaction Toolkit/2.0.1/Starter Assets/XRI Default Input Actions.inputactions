@@ -1095,6 +1095,24 @@
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": false
+                },
+                {
+                    "name": "ExtendPole",
+                    "type": "Button",
+                    "id": "314a303c-acf9-48ec-b768-f69971ea9247",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "ContractPole",
+                    "type": "Button",
+                    "id": "87493804-5827-4413-a3d8-8bd3a708fdf1",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
                 }
             ],
             "bindings": [
@@ -1117,6 +1135,28 @@
                     "processors": "",
                     "groups": "",
                     "action": "ToggleCone",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "a4270969-cb1e-4362-ab27-70cb781d824e",
+                    "path": "<XRController>{RightHand}/primaryButton",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "ExtendPole",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "6594819d-e776-43ed-90e7-dc0287960759",
+                    "path": "<XRController>{RightHand}/secondaryButton",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "ContractPole",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

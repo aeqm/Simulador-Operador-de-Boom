@@ -13,7 +13,8 @@ public class HideMenu : MonoBehaviour
 
     }
     void Start()
-    { gameObject.SetActive(false);
+    {
+        gameObject.SetActive(false);
     }
 
     private void OnDestroy()
