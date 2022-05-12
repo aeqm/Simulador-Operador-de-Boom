@@ -1,0 +1,47 @@
+:: StoryTitle
+Boom Op VR
+
+:: UserScript[script]
+
+
+:: UserStylesheet[stylesheet]
+
+
+:: Desplegar Menú Reloj[Start]
+Aparece un mensaje en el que se lee:"Acciona el botón "X" del control derecho para acceder al menú en tu muñeca. Mira la escena dando "Play" con el rayo del control derecho" También puedes activar y desactivar la ayuda visual de cuadro con el botón "Y" del control izquierdo"
+El jugador acciona los comandos y luego de unos pocos segundos aparece el mensaje de "Desplegar caña"
+@
+[[Desplegar Caña]]
+
+<
+
+>
+{
+LeftHand Controller.Hide(context)
+}
+
+:: Desplegar Caña
+Aparece el gameObject de la caña. Segundos después aparece un mensaje en el que se lee:"Dirige tu mano en dirección a la caña y acciona el trigger del control para agarrarla. Despliega la caña con el botón "A" del control derecho y contráela con el botón "B" del mismo control" 
+El jugador acciona los comandos y luego de unos pocos segundos aparece el mensaje de "Probar funcionalidad"
+@
+[[Probar funcionalidad]]
+
+<
+Simulator.Wait
+SistemaMensajes.ComportamientoDeCaña
+>
+{
+BtnGuion.Pressed()
+}
+
+:: Probar funcionalidad
+Aparece un mensaje en el que se lee:"Todo listo.  Dirige tu mano en dirección a la caña y acciona el trigger del control para agarrarla. Despliega la caña con el botón "A" del control derecho y contráela con el botón "B" del mismo control" 
+Ahora da "Play" y prueba capturar los diálogos de cada actor lo más cerca posible sin entrar a cuadro o alguien del equipo de rodaje te lo hará saber con un odioso grito...
+
+@
+<
+>
+{
+BtnPlay.Pressed()
+}
+

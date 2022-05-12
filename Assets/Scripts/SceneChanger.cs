@@ -18,4 +18,8 @@ public class SceneChanger : MonoBehaviour
     {
         SceneManager.LoadScene("Scene3EnSet");
     }
+    public void Scene4()
+    {
+        SceneManager.LoadScene("Tut");
+    }
 }

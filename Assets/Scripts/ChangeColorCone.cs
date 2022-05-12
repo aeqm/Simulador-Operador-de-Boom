@@ -6,15 +6,17 @@ public class ChangeColorCone : MonoBehaviour
 
 { 
 
-    //[SerializeField] private Material myMaterial;
     public Material[] material;
     Renderer rend;
+    public AudioClip[] audioClips;
+    public AudioSource audioSource;
 
     private void Start()
     {
         rend = GetComponent<Renderer>();
         rend.enabled = true;
         rend.sharedMaterial = material[0];
+        audioSource = gameObject.GetComponent<AudioSource>();
     }
 
     private void OnCollisionEnter(Collision col)
@@ -22,6 +24,7 @@ public class ChangeColorCone : MonoBehaviour
         if (col.gameObject.tag == "Player")
         {
             rend.sharedMaterial = material[1];
+            PlayRandom();
         }
           
     }
@@ -34,22 +37,10 @@ public class ChangeColorCone : MonoBehaviour
 
     }
 
-    /* void OnCollisionEnter(Collision col)
-     {
-         if (col.gameObject.tag == "Player")
-         {
-             //Debug.Log("Collision Detected");
-             myMaterial.color = Color.white;
+    void PlayRandom()
+    {
+        audioSource.clip = audioClips[Random.Range(0, audioClips.Length)];
+        audioSource.Play();
+    }
 
-         }
-     }
-     void OnCollisionExit(Collision col)
-         {
-             if (col.gameObject.tag == "Player")
-         {
-                 //Debug.Log("Collision Detected");
-                 myMaterial.color = Color.yellow;
-
-             }
-         }*/
 }
