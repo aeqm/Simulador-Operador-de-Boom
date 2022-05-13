@@ -24,4 +24,9 @@ public class SceneChanger : MonoBehaviour
     {
         SceneManager.LoadScene("Tut");
     }
+
+    public void QuitGame()
+    {
+        Application.Quit();
+    }
 }

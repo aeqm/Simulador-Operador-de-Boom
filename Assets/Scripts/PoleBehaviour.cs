@@ -17,6 +17,11 @@ public class PoleBehaviour : MonoBehaviour
         ContractPole.action.started += Contract;
 
     }
+    private void OnDestroy()
+    {
+        ExtendPole.action.started -= Extend;
+        ContractPole.action.started -= Contract;
+    }
 
     private void Extend(InputAction.CallbackContext context)
         {
